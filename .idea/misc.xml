@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.5938461538461538" />
+        <entry key="Story/src/main/res/drawable/bg_gradient_bottom.xml" value="0.609375" />
+        <entry key="Story/src/main/res/drawable/bg_shadow.xml" value="0.16574074074074074" />
+        <entry key="Story/src/main/res/drawable/ic_close_24.xml" value="0.16574074074074074" />
+        <entry key="Story/src/main/res/drawable/ic_swipe_up.xml" value="0.2713541666666667" />
+        <entry key="Story/src/main/res/layout/fragment_blank.xml" value="0.20833333333333334" />
+        <entry key="Story/src/main/res/layout/header_story_view.xml" value="0.5" />
+        <entry key="Story/src/main/res/layout/story_view_header.xml" value="0.20833333333333334" />
+        <entry key="Story/src/main/res/layout/story_view_progress.xml" value="0.20833333333333334" />
+        <entry key="Story/src/main/res/layout/widget_story_view.xml" value="0.26452410383189123" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_tab.xml" value="0.3416666666666667" />
+        <entry key="story/src/main/res/layout/story_view_header.xml" value="0.5911458333333334" />
+        <entry key="story/src/main/res/layout/widget_story_view.xml" value="0.5911458333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

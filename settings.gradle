@@ -1,0 +1,3 @@
+rootProject.name = "StoryModule"
+include ':app'
+include ':story'
