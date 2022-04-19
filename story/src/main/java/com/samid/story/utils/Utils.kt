@@ -33,7 +33,7 @@ object Utils {
 
     fun onClickScreenLeft(event: MotionEvent): Boolean {
         if (hasCLicked(event)) {
-            if (event.rawX < screenWidth / 3)
+            if (event.rawX < screenWidth * 1 / 2)
                 return true
         }
         return false
@@ -41,7 +41,7 @@ object Utils {
 
     fun onClickScreenRight(event: MotionEvent): Boolean {
         if (hasCLicked(event)) {
-            if (event.rawX > screenWidth * 2 / 3)
+            if (event.rawX > screenWidth * 1 / 2)
                 return true
         }
 

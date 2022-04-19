@@ -34,14 +34,16 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="10dp"
         android:gravity="center_vertical"
+        android:includeFontPadding="false"
         android:minHeight="32dp"
-        android:paddingVertical="8dp"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:textColor="?colorOnPrimary"
+        android:paddingVertical="4dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/closeBtn"
         app:layout_constraintStart_toEndOf="@+id/avatarImg"
         app:layout_constraintTop_toBottomOf="@+id/progressContainer"
-        app:layout_goneMarginStart="16dp" />
+        app:layout_goneMarginStart="16dp"
+        tools:text="kjsfkjhsa" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/closeBtn"

@@ -254,6 +254,7 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
 
         if (Utils.onClickScreenRight(event)) {
             binding.headerView.next()
+            exoPlayer?.pause()
         }
 
         if (Utils.actionDown(event)) {

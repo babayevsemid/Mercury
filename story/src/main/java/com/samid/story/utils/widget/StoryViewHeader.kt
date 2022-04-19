@@ -71,7 +71,6 @@ class StoryViewHeader(context: Context, attrs: AttributeSet?) : ConstraintLayout
 
         if (nextIndex >= binding.progressContainer.childCount) {
             pause()
-            fillProgressIndicator(currentIndex)
 
             showNextStories.invoke()
         } else
