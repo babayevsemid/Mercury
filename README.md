@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.babayevsemid:Mercury:1.0.0"
+    implementation "com.github.babayevsemid:Mercury:1.0.0"
 }
 ```
 ### Use
