@@ -1,4 +1,4 @@
-package com.samid.story.widget
+package com.samid.story.utils.widget
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -14,16 +14,19 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.viewpager2.widget.ViewPager2
-import com.samid.story.data.model.StoryModel
-import com.samid.story.databinding.WidgetStoryViewBinding
-import com.samid.story.utils.OnSwipeListener
-import com.samid.story.utils.Utils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.google.android.exoplayer2.*
+import com.samid.story.R
+import com.samid.story.data.model.StoryModel
+import com.samid.story.databinding.WidgetStoryViewBinding
+import com.samid.story.utils.OnSwipeListener
+import com.samid.story.utils.Utils
+import com.samid.story.utils.getStatusBarHeight
+import com.samid.story.utils.setPaddingTop
 
 
 class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(context, attrs),
@@ -57,6 +60,13 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                 viewPager2?.isUserInputEnabled = false
             }
         })
+
+        context.obtainStyledAttributes(attrs, R.styleable.StoryView).apply {
+            val fitsSystemWindow = getBoolean(R.styleable.StoryView_fitsSystemWindows, false)
+            if (fitsSystemWindow)
+                binding.headerView.setPaddingTop(context.getStatusBarHeight())
+            recycle()
+        }
 
         initStoryChange()
         setClicks()
@@ -103,7 +113,9 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                     dataSource: DataSource?, isFirstResource: Boolean
                 ): Boolean {
                     showContent()
-                    binding.headerView.resume()
+
+                    if (isResumed)
+                        binding.headerView.resume()
 
                     return false
                 }
@@ -139,10 +151,14 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                     ExoPlayer.STATE_READY -> {
                         binding.headerView.setProgressMaxDuration(it.duration.toInt())
 
-                        if (exoPlayer?.isPlaying == true)
-                            binding.headerView.resume()
-                        else
-                            binding.headerView.pause()
+                        if (isResumed) {
+                            if (exoPlayer?.isPlaying == true)
+                                binding.headerView.resume()
+                            else
+                                binding.headerView.pause()
+                        } else {
+                            it.pause()
+                        }
 
                         showContent()
                     }
@@ -195,15 +211,15 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                     exoPlayer?.seekTo(0)
 
                     binding.headerView.reset()
-                    onResume()
 
                     currentItem = position
                 }
             }
 
             override fun onPageScrollStateChanged(state: Int) {
-                if (state == 0 && currentItem == viewPager2.currentItem)
+                if (state == 0 && currentItem == viewPager2.currentItem) {
                     onResume()
+                }
             }
         })
     }

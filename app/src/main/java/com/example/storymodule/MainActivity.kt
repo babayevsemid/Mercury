@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         adapter.add(TabFragment())
 
         binding.viewPager.adapter = adapter
+        binding.viewPager.setPageTransformer(CubePageTransformer())
     }
 
     fun getViewPager2() = binding.viewPager

@@ -1,5 +1,6 @@
 package com.samid.story.utils
 
+import android.content.Context
 import android.content.res.Resources
 import android.os.CountDownTimer
 import android.view.MotionEvent

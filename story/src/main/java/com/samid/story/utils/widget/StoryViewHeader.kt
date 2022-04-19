@@ -1,4 +1,4 @@
-package com.samid.story.widget
+package com.samid.story.utils.widget
 
 import android.animation.Animator
 import android.animation.ObjectAnimator

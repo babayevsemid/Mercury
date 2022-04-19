@@ -2,7 +2,7 @@
 <resources>
     <style name="Theme.Story" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorOnPrimary">@color/white</item>
-        <item name="storyViewProgressTrackColor">@color/gray_ee</item>
+        <item name="storyViewProgressTrackColor">#80FFFFFF</item>
         <item name="storyViewProgressIndicatorColor">@color/white</item>
     </style>
 </resources>

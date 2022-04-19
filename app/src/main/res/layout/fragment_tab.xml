@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -11,9 +12,10 @@
         android:layout_height="match_parent"
         tools:context=".TabFragment">
 
-        <com.samid.story.widget.StoryView
+        <com.samid.story.utils.widget.StoryView
             android:id="@+id/storyView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            app:fitsSystemWindows="true"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
