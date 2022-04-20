@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.util.AttributeSet
+import android.util.Log
 import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -157,6 +158,7 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                             else
                                 binding.headerView.pause()
                         } else {
+                            binding.headerView.pause()
                             it.pause()
                         }
 
@@ -164,8 +166,9 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                     }
                     ExoPlayer.STATE_BUFFERING ->
                         showLoading()
-                    ExoPlayer.STATE_ENDED ->
-                        binding.headerView.next()
+                    ExoPlayer.STATE_ENDED -> {
+//                        binding.headerView.next()
+                    }
                     else -> {
                     }
                 }

@@ -1,6 +1,7 @@
 package com.example.storymodule
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,15 +48,15 @@ class TabFragment : Fragment() {
 
     private fun getStoryList() = arrayListOf(
         StoryModel(
-            profileName = "Title1",
-            profileImage = "https://avatarfiles.alphacoders.com/184/thumb-184230.jpg",
-            photoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
-        ),
-        StoryModel(
             profileName = "Title",
             profileImageVisible = false,
             profileImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSD0XLEaT5CtjF-wjpktGBOGZ3zcNZuyVVj5osLcVXyra9HytvgxyiLclfJpQDDcZQbaQ&usqp=CAU",
             videoUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+        ),
+        StoryModel(
+            profileName = "Title1",
+            profileImage = "https://avatarfiles.alphacoders.com/184/thumb-184230.jpg",
+            photoUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
         ),
         StoryModel(
             profileName = "Title2",
