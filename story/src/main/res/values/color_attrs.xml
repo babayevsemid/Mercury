@@ -2,4 +2,7 @@
 <resources>
     <attr name="storyViewProgressTrackColor" type="color"/>
     <attr name="storyViewProgressIndicatorColor" type="color"/>
+    <attr name="storyViewCloseIconColor" type="color"/>
+    <attr name="storyViewTitleTextColor" type="color"/>
+    <attr name="storyViewShowMoreColor" type="color"/>
 </resources>

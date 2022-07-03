@@ -7,8 +7,8 @@ data class StoryModel(
     val videoUrl: String? = null,
     val duration: Long = 5000,
     val completed: Boolean = false,
-    val profileImageVisible: Boolean = true,
-    val seeMoreVisible: Boolean = true
+    val profileImageVisible: Boolean = false,
+    val seeMoreVisible: Boolean = false
 ){
     val isVideo get() = videoUrl.isNullOrEmpty().not()
 }

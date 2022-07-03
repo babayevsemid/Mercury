@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.util.AttributeSet
-import android.util.Log
 import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -20,7 +19,10 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import com.google.android.exoplayer2.*
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.PlaybackException
+import com.google.android.exoplayer2.Player
 import com.samid.story.R
 import com.samid.story.data.model.StoryModel
 import com.samid.story.databinding.WidgetStoryViewBinding
@@ -82,6 +84,7 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
 
             binding.coverImg.isVisible = !model.isVideo
             binding.playerView.isVisible = model.isVideo
+            binding.seeMoreBtn.isVisible = model.seeMoreVisible
 
             showLoading()
 

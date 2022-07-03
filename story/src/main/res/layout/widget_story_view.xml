@@ -9,8 +9,7 @@
     <ImageView
         android:id="@+id/coverImg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop" />
+        android:layout_height="match_parent" />
 
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/playerView"
@@ -48,7 +47,7 @@
         android:background="@color/transparent"
         android:clickable="false"
         android:focusable="false"
-        android:src="@drawable/ic_error_outline_24"
+        android:src="@drawable/ic_story_view_load_failed_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,10 +81,11 @@
         android:paddingBottom="16dp"
         android:text="@string/story_view_see_more"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-        android:textColor="@color/white"
-        app:icon="@drawable/ic_swipe_up"
+        android:textColor="?storyViewShowMoreColor"
+        app:icon="@drawable/ic_story_view_swipe_up"
         app:iconGravity="textTop"
         app:iconPadding="2dp"
+        app:iconTint="?storyViewShowMoreColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -94,7 +94,7 @@
         android:id="@+id/seeMoreShadow"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/bg_gradient_bottom"
+        android:background="@drawable/bg_story_view_gradient_bottom"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.constraintlayout.widget.Group

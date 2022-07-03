@@ -15,8 +15,9 @@
         <entry key="Story/src/main/res/layout/widget_story_view.xml" value="0.26452410383189123" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_tab.xml" value="0.3416666666666667" />
+        <entry key="story/src/main/res/drawable/bg_story_view_gradient_bottom.xml" value="0.124" />
         <entry key="story/src/main/res/layout/story_view_header.xml" value="0.47058823529411764" />
-        <entry key="story/src/main/res/layout/widget_story_view.xml" value="0.5911458333333334" />
+        <entry key="story/src/main/res/layout/widget_story_view.xml" value="0.19135802469135801" />
       </map>
     </option>
   </component>

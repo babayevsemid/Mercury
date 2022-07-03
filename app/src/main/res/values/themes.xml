@@ -20,5 +20,8 @@
 
         <item name="storyViewProgressTrackColor">@color/gray_ee</item>
         <item name="storyViewProgressIndicatorColor">@color/white</item>
+        <item name="storyViewTitleTextColor">@color/white</item>
+        <item name="storyViewCloseIconColor">@color/white</item>
+        <item name="storyViewShowMoreColor">@color/white</item>
     </style>
 </resources>

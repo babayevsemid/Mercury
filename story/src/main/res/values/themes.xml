@@ -4,5 +4,8 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="storyViewProgressTrackColor">#80FFFFFF</item>
         <item name="storyViewProgressIndicatorColor">@color/white</item>
+        <item name="storyViewTitleTextColor">@color/white</item>
+        <item name="storyViewCloseIconColor">@color/white</item>
+        <item name="storyViewShowMoreColor">@color/white</item>
     </style>
 </resources>

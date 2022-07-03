@@ -32,7 +32,7 @@ class StoryViewHeader(context: Context, attrs: AttributeSet?) : ConstraintLayout
     var onCloseClick: () -> Unit = {}
 
     init {
-        setBackgroundResource(R.drawable.bg_gradient_top)
+        setBackgroundResource(R.drawable.bg_story_view_gradient_top)
 
         binding.closeBtn.setOnClickListener { onCloseClick.invoke() }
     }
@@ -136,6 +136,8 @@ class StoryViewHeader(context: Context, attrs: AttributeSet?) : ConstraintLayout
     private fun loadModel(index: Int) {
         storyList?.get(index)?.let {
             binding.titleTxt.text = it.profileName
+            binding.avatarImg.isVisible = it.profileImageVisible
+
             Glide.with(context.applicationContext).load(it.profileImage).into(binding.avatarImg)
         }
     }
