@@ -8,6 +8,7 @@ import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
+import android.widget.ImageView.ScaleType
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
@@ -68,6 +69,8 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
             val fitsSystemWindow = getBoolean(R.styleable.StoryView_fitsSystemWindows, false)
             if (fitsSystemWindow)
                 binding.headerView.setPaddingTop(context.getStatusBarHeight())
+
+            setScaleType(getInt(R.styleable.StoryView_android_scaleType, -1))
             recycle()
         }
 
@@ -294,6 +297,13 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
     private fun showContent() {
         binding.errorGroup.isVisible = false
         binding.progressIndicator.isVisible = false
+    }
+
+    private fun setScaleType(scaleType: Int) {
+        if (scaleType > -1) {
+            val types = ScaleType.values()
+            binding.coverImg.scaleType = types[scaleType]
+        }
     }
 
     override fun onStateChanged(source: LifecycleOwner, event: Lifecycle.Event) {

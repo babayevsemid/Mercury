@@ -2,5 +2,6 @@
 <resources>
     <declare-styleable name="StoryView">
         <attr name="fitsSystemWindows" format="boolean" />
+        <attr name="android:scaleType" />
     </declare-styleable>
 </resources>
