@@ -49,17 +49,31 @@ private fun getStoryList() = arrayListOf(
 ### StoryModel
 
 ``` 
-  data class StoryModel(
+data class StoryModel(
     val profileName: String?,
     val profileImage: String?,
     val photoUrl: String? = null,
     val videoUrl: String? = null,
     val duration: Long = 5000,
     val completed: Boolean = false,
-    val profileImageVisible: Boolean = true,
-    val seeMoreVisible: Boolean = true
+    val profileImageVisible: Boolean = false,
+    val seeMoreVisible: Boolean = false
 ){
     val isVideo get() = videoUrl.isNullOrEmpty().not()
 }
+        
+``` 
+
+
+  
+### XML
+
+``` 
+<com.samid.story.utils.widget.StoryView
+            android:id="@+id/storyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:fitsSystemWindows="true" />
         
 ``` 
