@@ -3,7 +3,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.samid.story">
 
-    <application
-        android:usesCleartextTraffic="true"
-        tools:ignore="UnusedAttribute" />
 </manifest>
