@@ -174,13 +174,13 @@ class StoryViewHeader(context: Context, attrs: AttributeSet?) : ConstraintLayout
         objectAnimator?.duration = max.toLong()
         objectAnimator?.interpolator = LinearInterpolator()
         objectAnimator?.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationEnd(animation: Animator?) {
+            override fun onAnimationEnd(animation: Animator) {
                 next()
             }
 
-            override fun onAnimationStart(animation: Animator?) {}
-            override fun onAnimationCancel(animation: Animator?) {}
-            override fun onAnimationRepeat(animation: Animator?) {}
+            override fun onAnimationStart(animation: Animator) {}
+            override fun onAnimationCancel(animation: Animator) {}
+            override fun onAnimationRepeat(animation: Animator) {}
         })
     }
 

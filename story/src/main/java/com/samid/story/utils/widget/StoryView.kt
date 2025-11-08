@@ -59,7 +59,7 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
                 return true
             }
 
-            override fun onLongPress(e: MotionEvent?) {
+            override fun onLongPress(e: MotionEvent) {
                 binding.headerView.isVisible = false
                 viewPager2?.isUserInputEnabled = false
             }
@@ -93,8 +93,11 @@ class StoryView(context: Context, attrs: AttributeSet?) : ConstraintLayout(conte
 
             if (model.isVideo) {
                 loadVideo(model)
-            } else
-                loadPhoto(model)
+            } else {
+                post {
+                    loadPhoto(model)
+                }
+            }
 
             binding.headerView.setProfileImageVisible(model.profileImageVisible)
             binding.seeMoreGroup.isVisible = model.seeMoreVisible
